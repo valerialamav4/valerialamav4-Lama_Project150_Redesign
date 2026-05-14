@@ -1,0 +1,406 @@
+/* CSS RESET */
+body, header, nav, main, footer, img, h1, h3, ul, aside, figure, figcaption, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+/*STYLE RULES FOR BODY AND IMAGES*/
+body {
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures the body is at least as tall as the screen */
+    margin: 0;
+}
+
+img, video {
+    max-width: 100%;
+    display: block;
+}
+
+
+/*STYLE RULES FOR HEADER*/
+header {
+    margin: 0;
+    padding: 0;
+}
+  
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+/*STYLE RULES FOR NAVIGATION MENU*/
+  
+.nav-menu {
+    background: #f7f74d;
+    width: 100%;
+    font-family: sans-serif;
+    font-size: 0.95rem;
+    color: #222;
+}
+  
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 1.5rem;
+    height: 50px;
+}
+  
+.nav-links a {
+    text-decoration: none;
+    color: #111;
+    font-size: 1.6vw;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 6px 1vw;
+    border-radius: 6px;
+    transition: background 0.15s, color 0.15s;
+}
+  
+.nav-links a:hover {
+    background: #d4d41b;
+}
+
+/*STYLE RULES FOR MAIN CONTENT*/
+main {
+    padding: 3% 8%;
+    font-family: "Lora", serif;
+}
+
+main p {
+    font-size: 1.25em;
+}
+
+main h3 {
+    padding-top: 2%;
+}
+
+main ul {
+    list-style-type: square;
+}
+
+/*STYLE RULES FOR INDEX MISSION*/
+
+.mission {
+  background: #5b8abc23;
+  text-align: justify;
+  padding: 3rem 5%;
+  font-family: sans-serif;
+  color: #222;
+}
+
+.mission h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.mission p {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+/*STYLE RULES FOR INDEX BUTTONS?*/
+.button-group {
+    display: flex;
+    justify-content: left;
+    gap: 3rem;
+    padding: 2rem 0;
+  }
+  
+.btn {
+    text-decoration: none;
+    color: #444;
+    font-family: sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    padding: 1rem 2.5rem;
+    border: 1.5px solid #20324663;
+    border-radius: 8px;
+    transition: background 0.2s, color 0.2s;
+}
+  
+.btn:hover {
+    background: #2c4d73a7;
+    color: #fff;
+}
+
+
+/*TICKER BAR (that took a whole evening with my programmer friend's help, because I didn't understand the keyframes RIP)*/
+
+.ticker-bar {
+    background: #328ced6d;
+    padding: 8px 0;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #444;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.ticker-content {
+    display: inline-block;
+    animation: ticker 40s linear infinite;
+  }
+  
+.ticker-content span {
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #222;
+    padding-right: 4rem;
+}
+  
+@keyframes ticker {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-33.33%); }
+}
+
+/*STYLE RULES FOR GET INVOLVED PAGE HELP SECTION*/
+
+.help-section{
+    margin: 0 5rem;
+    max-width: 1200px;
+    padding: 0.5rem 1rem; 
+    text-align: justify;
+    font-family: sans-serif;
+    color: #222;
+}
+
+.help-section h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+  
+.help-section p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+}
+
+/*STYLE RULES FOR GET TABLE*/
+
+.card-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 2rem;
+    background: #fff;
+    padding: 0 3rem;
+    margin-top: 0;
+}
+  
+.card {
+    background: #328ced23;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 2rem;
+    width: 50%;
+    vertical-align: text-top;
+}
+  
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+  
+.card h3 {
+    font-family: sans-serif;
+    font-size: 2.2rem;
+    margin: 0;
+}
+  
+.card img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+  
+.card p {
+    font-family: sans-serif;
+    font-size: 1rem;
+     font-weight: 600;
+    color: #444;
+    line-height: 1.6;
+}
+  
+.card .btn {
+    display: block;
+    text-align:right;
+    margin-top: 2rem;
+    text-decoration: none;
+    color: #444;
+    font-family: sans-serif;
+    font-size: 0.95rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    padding: 0.85rem 2rem;
+    border: 1.5px solid #20324663;
+    border-radius: 8px;
+    width: fit-content;
+    margin-left: auto;
+    transition: background 0.2s, color 0.2s;
+}
+  
+.card .btn:hover {
+    background: #2c4d73a7;
+    color: #fff;
+}
+
+
+/*STYLE RULES FOR FOOTER MENU*/
+  
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 1.5rem;
+    background: #111;
+    font-family: sans-serif;
+    font-size: 1rem;
+    color: #e8e8f0;
+    margin-top: auto;
+}
+
+.contact {
+    line-height: 1.7;
+    grid-column: 1;
+    grid-row: 1 / 3;
+    line-height: 1.7;
+}
+
+.contact a {
+    color: #e8e82ed4;
+}
+
+.contact a:hover{
+    color: #ffffcf;
+}
+
+.contact p {
+    margin: 0;
+}
+
+.copyright {
+    grid-column: 2;
+    grid-row: 1;
+    text-align: right;
+    font-size: 1rem;
+    font-weight: 650;
+    color: #fff;
+}
+
+.socials {
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+}
+
+.socials img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
+
+
+/*sTYLE RULES FOR GET INVOLVED FORM??*/
+
+.get-involved-form {
+    max-width: 950px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #5b8abc23;
+    border-radius: 20px;
+}
+
+.get-involved-form h2 {
+    font-size: 2rem;
+}
+  
+.form-subtitle {
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+  
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+  
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 1rem;
+}
+  
+.form-group label {
+    font-size: 14px;
+    font-weight: bold;
+}
+  
+.form-group input,.form-group select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.role-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    border: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+
+.role-card {
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 1.25rem 1rem;
+    text-align: center;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    transition: all 0.2s;
+}
+
+.role-card input[type="radio"] {
+    display: none;
+}
+
+.role-card:has(input:checked) {
+    border-color: #1a5f8a;
+    background-color: #2c4d73a7;
+    color: #fff;
+}
+
+.role-card:hover {
+    border-color: #1a5f8a;
+}
